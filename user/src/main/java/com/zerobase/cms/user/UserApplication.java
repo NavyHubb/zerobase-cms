@@ -11,7 +11,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaAuditing
 @EnableJpaRepositories  // JpaReposiotry를 상속받은 repository interface를 Bean으로 등록
 public class UserApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(UserApplication.class, args);
     }

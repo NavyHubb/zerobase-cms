@@ -1,21 +1,17 @@
-#spring:
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/zeroorder?useSSL=false,useUnicode=true&allowPublicKeyRetrieval=true
-
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:./Users/Seongjae
-    username: sa
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zeroorder?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+    username: root
+    password: zerobase
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
-    database: h2
+      ddl-auto: create
+    database: mysql
 
 feign:
   okhttp:
@@ -25,7 +21,4 @@ feign:
       enabled: true
 
 server:
-  port: 8081
-
-mailgun:
-  key: 116586ca897a2282663b71e1f7db96c5-30344472-95bea1d1
+  port: 8080

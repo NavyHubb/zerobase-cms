@@ -23,7 +23,7 @@ class EmailSendServiceTest {
                 mailgunClient.sendEmail(SendMailForm.builder()
                                 .from("abc@gmail.com")
                                 .to("seongjae972@gmail.com")
-                                .subject("This is Me")
+                                .subject("This is test")
                                 .text("It isn, in fact.")
                                 .build());
 
